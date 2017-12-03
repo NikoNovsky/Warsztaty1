@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class GuessGame {
 
 	public static void main(String[] args) {
+		int x = 0;
 		boolean result = false;
 		Random r = new Random(); 
 		int a = r.nextInt(100)+1;
@@ -17,9 +18,10 @@ public class GuessGame {
 		
 		while (result == false) {
 			try { 	
+				x++;
 				int n = scan.nextInt();				
 				if (n == a) {
-					System.out.println("Zgadłeś!");
+					System.out.println("Zgadłeś za " + x + " razem!");
 					result = true;
 				} else if (n > a){
 					System.out.println("Za wysoka liczba, podaj kolejną!");
